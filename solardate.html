@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<style type="text/css">
+	@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+	body {font-family:"Droid Arabic Naskh", serif;}
+	</style>
+	
+<title>Solardate</title>
+</head>
+<body>
+<script type="text/javascript" src="solardate.js"></script>
+<script type="text/javascript" >
+print_solardate();
+document.write("<br /><br />");
+var ms=get_solardate_month_fa();
+var ds =get_solardate_day();
+var ys =get_solardate_year();
+var dss = topernumString(ds);
+var yss = topernumString(ys);
+var dw= get_solardate_dayname_fa();
+document.write("<center><span  dir=\"rtl\" style=\"font-size:50px;background-color:orange; color:white; border-radius:10px; padding:10px; border: red 4px solid;\">"+dw+"، " +dss+" "+ms+ " "+ yss+"</span></center>");
+</script>
+<br />
+Copyright 2014 Xubuntu4iran, released under NewBSD License<br />
+</body>
+</html> 
