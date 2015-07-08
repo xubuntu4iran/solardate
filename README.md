@@ -1,1 +1,2 @@
 # solardate
+prints jalali date
