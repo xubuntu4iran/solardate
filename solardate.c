@@ -7,21 +7,7 @@
 //License: BSD
 
   int isLeap(int ym){
-	  int ly;
-   	if((ym%4)!=0)
-	{
-		ly = 0;
-	}else if((ym%25)!=0){
-		
-		ly = 1;
-		}else if((ym%16)!=0){
-		
-		ly = 0;
-		}else{
-		
-		ly = 1;
-		}
-		return ly;
+return ym%4 == 0 && (ym%100 != 0 || ym%400 ==0);
 	}
 
 int main(){
@@ -32,16 +18,16 @@ int main(){
   time ( &rawtime );
 
   ptm = localtime( &rawtime );
-  
+
   ym= (ptm->tm_year)+1900;
    //printf("%d \n",ym);
-	
+
   mm= (ptm->tm_mon)+1;
   dm=ptm->tm_mday;
-  
 
-	
-  
+
+
+
   	if(isLeap(ym)==1)
 	{
 	  if(mm==1)
@@ -54,7 +40,7 @@ int main(){
 	}
 	else if(dm>=21 && dm<=31)
 	{
-		ds= dm - 10;
+		ds= dm - 20;
 		ms=11;
 		ys=ym-622;
 	}
@@ -90,7 +76,7 @@ int main(){
 	}
     }
     else if(mm==4)
-    {	
+    {
 	if(dm>=1 && dm<=19)
 	{
 		ds= dm+12;
@@ -105,7 +91,7 @@ int main(){
 	}
     }
       else if(mm==5)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+11;
@@ -120,7 +106,7 @@ int main(){
 	}
     }
         else if(mm==6)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+11;
@@ -135,7 +121,7 @@ int main(){
 	}
     }
             else if(mm==7)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -150,7 +136,7 @@ int main(){
 	}
     }
             else if(mm==8)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -165,7 +151,7 @@ int main(){
 	}
     }
                 else if(mm==9)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -180,7 +166,7 @@ int main(){
 	}
     }
              else if(mm==10)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+9;
@@ -195,7 +181,7 @@ int main(){
 	}
     }
              else if(mm==11)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+10;
@@ -210,7 +196,7 @@ int main(){
 	}
     }
              else if(mm==12)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+10;
@@ -228,7 +214,7 @@ int main(){
     else if(isLeap(ym-1)==1)
     {
             if(mm==1)
-    {	
+    {
 	if(dm>=1 && dm<=19)
 	{
 		ds= dm+11;
@@ -243,7 +229,7 @@ int main(){
 	}
     }
           else if(mm==2)
-    {	
+    {
 	if(dm>=1 && dm<=18)
 	{
 		ds= dm+12;
@@ -258,7 +244,7 @@ int main(){
 	}
     }
            else if(mm==3)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+10;
@@ -273,7 +259,7 @@ int main(){
 	}
     }
           else if(mm==4)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+11;
@@ -288,7 +274,7 @@ int main(){
 	}
     }
            else if(mm==5)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -303,7 +289,7 @@ int main(){
 	}
     }
         else if(mm==6)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -318,7 +304,7 @@ int main(){
 	}
     }
         else if(mm==7)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -333,7 +319,7 @@ int main(){
 	}
     }
            else if(mm==8)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -348,7 +334,7 @@ int main(){
 	}
     }
              else if(mm==9)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -363,7 +349,7 @@ int main(){
 	}
     }
             else if(mm==10)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+8;
@@ -378,7 +364,7 @@ int main(){
 	}
     }
           else if(mm==11)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+9;
@@ -393,7 +379,7 @@ int main(){
 	}
     }
           else if(mm==12)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+9;
@@ -411,7 +397,7 @@ int main(){
         else if(isLeap(ym-2)==1)
     {
             if(mm==1)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+10;
@@ -426,7 +412,7 @@ int main(){
 	}
     }
           else if(mm==2)
-    {	
+    {
 	if(dm>=1 && dm<=19)
 	{
 		ds= dm+11;
@@ -441,7 +427,7 @@ int main(){
 	}
     }
            else if(mm==3)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+9;
@@ -456,7 +442,7 @@ int main(){
 	}
     }
           else if(mm==4)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+11;
@@ -471,7 +457,7 @@ int main(){
 	}
     }
            else if(mm==5)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -486,7 +472,7 @@ int main(){
 	}
     }
         else if(mm==6)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -501,7 +487,7 @@ int main(){
 	}
     }
         else if(mm==7)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -516,7 +502,7 @@ int main(){
 	}
     }
            else if(mm==8)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -531,7 +517,7 @@ int main(){
 	}
     }
              else if(mm==9)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -546,7 +532,7 @@ int main(){
 	}
     }
             else if(mm==10)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+8;
@@ -561,7 +547,7 @@ int main(){
 	}
     }
           else if(mm==11)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+9;
@@ -576,7 +562,7 @@ int main(){
 	}
     }
           else if(mm==12)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+9;
@@ -594,7 +580,7 @@ int main(){
          else if(isLeap(ym-3)==1)
     {
             if(mm==1)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+10;
@@ -609,7 +595,7 @@ int main(){
 	}
     }
           else if(mm==2)
-    {	
+    {
 	if(dm>=1 && dm<=19)
 	{
 		ds= dm+11;
@@ -624,7 +610,7 @@ int main(){
 	}
     }
            else if(mm==3)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+9;
@@ -639,7 +625,7 @@ int main(){
 	}
     }
           else if(mm==4)
-    {	
+    {
 	if(dm>=1 && dm<=20)
 	{
 		ds= dm+11;
@@ -654,7 +640,7 @@ int main(){
 	}
     }
            else if(mm==5)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -669,7 +655,7 @@ int main(){
 	}
     }
         else if(mm==6)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+10;
@@ -684,7 +670,7 @@ int main(){
 	}
     }
         else if(mm==7)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -699,7 +685,7 @@ int main(){
 	}
     }
            else if(mm==8)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -714,7 +700,7 @@ int main(){
 	}
     }
              else if(mm==9)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+9;
@@ -729,7 +715,7 @@ int main(){
 	}
     }
             else if(mm==10)
-    {	
+    {
 	if(dm>=1 && dm<=22)
 	{
 		ds= dm+8;
@@ -744,7 +730,7 @@ int main(){
 	}
     }
           else if(mm==11)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+9;
@@ -759,7 +745,7 @@ int main(){
 	}
     }
           else if(mm==12)
-    {	
+    {
 	if(dm>=1 && dm<=21)
 	{
 		ds= dm+9;
@@ -812,9 +798,9 @@ int main(){
 		else if (ms == 12){
 		strcpy(mss, "Esfand");
 		}
-		
+
     printf("%s %d, %d AP\n",mss,ds,ys);
-	
-	
-	return 0;	
+
+
+	return 0;
 }
