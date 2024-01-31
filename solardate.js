@@ -39,7 +39,7 @@
 	}
 	else if(dm>=21 && dm<=31)
 	{
-		ds= dm - 10;
+		ds= dm - 20;
 		ms=11;
 		ys=ym-622;
 	}
